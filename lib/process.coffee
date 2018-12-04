@@ -1,4 +1,4 @@
-pty = require 'pty.js'
+pty = require 'node-pty-prebuilt'
 path = require 'path'
 fs = require 'fs'
 _ = require 'underscore'
@@ -15,7 +15,7 @@ systemLanguage = do ->
 filteredEnvironment = do ->
   env = _.omit process.env, 'ATOM_HOME', 'ELECTRON_RUN_AS_NODE', 'GOOGLE_API_KEY', 'NODE_ENV', 'NODE_PATH', 'userAgent', 'taskPath'
   env.LANG ?= systemLanguage
-  env.TERM_PROGRAM = 'platformio-ide-terminal'
+  env.TERM_PROGRAM = 'atom-ide-terminal'
   return env
 
 module.exports = (pwd, shell, args, env, options={}) ->
@@ -32,19 +32,19 @@ module.exports = (pwd, shell, args, env, options={}) ->
     ptyProcess = pty.open()
 
   emitTitle = _.throttle ->
-    emit('platformio-ide-terminal:title', ptyProcess.process)
+    emit('atom-ide-terminal:title', ptyProcess.process)
   , 500, true
 
   ptyProcess.on 'data', (data) ->
-    emit('platformio-ide-terminal:data', data)
+    emit('atom-ide-terminal:data', data)
     emitTitle()
 
   ptyProcess.on 'exit', ->
-    emit('platformio-ide-terminal:exit')
+    emit('atom-ide-terminal:exit')
     callback()
 
   process.on 'message', ({event, cols, rows, text}={}) ->
     switch event
       when 'resize' then ptyProcess.resize(cols, rows)
       when 'input' then ptyProcess.write(text)
-      when 'pty' then emit('platformio-ide-terminal:pty', ptyProcess.pty)
+      when 'pty' then emit('atom-ide-terminal:pty', ptyProcess.pty)

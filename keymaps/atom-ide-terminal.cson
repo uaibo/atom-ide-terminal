@@ -1,0 +1,26 @@
+'.platform-darwin atom-workspace':
+  'cmd-shift-t': 'atom-ide-terminal:new'
+  'cmd-shift-j': 'atom-ide-terminal:prev'
+  'cmd-shift-k': 'atom-ide-terminal:next'
+  'cmd-shift-x': 'atom-ide-terminal:close'
+  'cmd-alt-f': 'atom-ide-terminal:focus'
+  'ctrl-enter': 'atom-ide-terminal:insert-selected-text'
+  'ctrl-`': 'atom-ide-terminal:toggle'
+  'ctrl-alt-enter': 'atom-ide-terminal:insert-selected-text'
+
+'.platform-linux atom-workspace, .platform-win32 atom-workspace':
+  'alt-shift-t': 'atom-ide-terminal:new'
+  'alt-shift-j': 'atom-ide-terminal:prev'
+  'alt-shift-k': 'atom-ide-terminal:next'
+  'alt-shift-x': 'atom-ide-terminal:close'
+  'ctrl-enter': 'atom-ide-terminal:insert-selected-text'
+  'ctrl-`': 'atom-ide-terminal:toggle'
+  'ctrl-alt-f': 'atom-ide-terminal:focus'
+
+'.platform-darwin .atom-ide-terminal .terminal':
+  'cmd-c': 'atom-ide-terminal:copy'
+  'cmd-v': 'atom-ide-terminal:paste'
+
+'.platform-linux .atom-ide-terminal .terminal, .platform-win32 .atom-ide-terminal .terminal':
+  'alt-v': 'atom-ide-terminal:paste'
+  'alt-c': 'atom-ide-terminal:copy'

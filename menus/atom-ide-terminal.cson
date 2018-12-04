@@ -1,0 +1,68 @@
+'context-menu':
+  '.atom-ide-terminal .pio-terminal-status-icon': [
+    {label: 'Red', command: 'atom-ide-terminal:status-red'},
+    {label: 'Orange', command: 'atom-ide-terminal:status-orange'},
+    {label: 'Yellow', command: 'atom-ide-terminal:status-yellow'},
+    {label: 'Green', command: 'atom-ide-terminal:status-green'},
+    {label: 'Blue', command: 'atom-ide-terminal:status-blue'},
+    {label: 'Purple', command: 'atom-ide-terminal:status-purple'},
+    {label: 'Pink', command: 'atom-ide-terminal:status-pink'},
+    {label: 'Cyan', command: 'atom-ide-terminal:status-cyan'},
+    {label: 'Magenta', command: 'atom-ide-terminal:status-magenta'},
+    {label: 'Default', command: 'atom-ide-terminal:status-default'},
+    {type: 'separator'},
+    {label: 'Hide', command: 'atom-ide-terminal:context-hide'},
+    {label: 'Rename', command: 'atom-ide-terminal:context-rename'},
+    {label: 'Close', command: 'atom-ide-terminal:context-close'}
+  ]
+  '.atom-ide-terminal .terminal': [
+    {label: 'Copy', command: 'atom-ide-terminal:copy'},
+    {label: 'Paste', command: 'atom-ide-terminal:paste'},
+    {type: 'separator'},
+    {label: 'Hide', command: 'atom-ide-terminal:hide'},
+    {label: 'Close', command: 'atom-ide-terminal:close'}
+    {type: 'separator'}
+    {label: "Clear", command: 'atom-ide-terminal:clear'}
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Atom IDE Terminal'
+      'submenu': [
+        {
+          'label': 'Toggle'
+          'command': 'atom-ide-terminal:toggle'
+        },
+        {
+          'label': 'Focus'
+          'command': 'atom-ide-terminal:focus'
+        },
+        {
+          'label': 'New Terminal'
+          'command': 'atom-ide-terminal:new'
+        },
+        {
+          'label': 'Previous Terminal'
+          'command': 'atom-ide-terminal:prev'
+        },
+        {
+          'label': 'Next Terminal'
+          'command': 'atom-ide-terminal:next'
+        },
+        {
+          'label': 'Toggle Fullscreen'
+          'command': 'atom-ide-terminal:fullscreen'
+        },
+        {
+          'label': 'Close Terminal'
+          'command': 'atom-ide-terminal:close'
+        },
+        {
+          'label': 'Close All Terminals'
+          'command': 'atom-ide-terminal:close-all'
+        }
+      ]
+    ]
+  }
+]

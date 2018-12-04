@@ -1,9 +1,9 @@
 {
-  "name": "platformio-ide-terminal",
-  "main": "./lib/platformio-ide-terminal",
-  "version": "2.8.4",
-  "description": "A terminal package for Atom, complete with themes, API and more for PlatformIO IDE. Fork of terminal-plus.",
-  "author": "Jeremy Ebneyamin",
+  "name": "atom-ide-terminal",
+  "main": "./lib/atom-ide-terminal",
+  "version": "5.0.0",
+  "description": "A terminal package for Atom, complete with themes, API and more. Fork of PlatformIO IDE.",
+  "author": "Nick Qiu",
   "keywords": [
     "PlatformIO",
     "terminal-plus",
@@ -18,27 +18,14 @@
     "console",
     "powershell"
   ],
-  "contributors": [
-    {
-      "name": "Ivan Kravets",
-      "email": "me@ikravets.com",
-      "url": "http://platformio.org"
-    },
-    {
-      "name": "Dmytro Kyrychuk",
-      "email": "dmytro.kyrychuck@gmail.com",
-      "url": "http://platformio.org"
-    }
-  ],
-  "homepage": "https://atom.io/packages/platformio-ide-terminal",
-  "repository": "https://github.com/platformio/platformio-atom-ide-terminal",
+  "repository": "https://github.com/qicrosoft/atom-ide-terminal",
   "license": "MIT",
   "engines": {
     "atom": ">=1.12.2 <2.0.0"
   },
   "dependencies": {
     "atom-space-pen-views": "^2.2.0",
-    "pty.js": "https://github.com/platformio/pty.js/tarball/prebuilt",
+    "node-pty-prebuilt": "^0.7.3",
     "term.js": "https://github.com/jeremyramin/term.js/tarball/master",
     "underscore": "^1.8.3"
   },

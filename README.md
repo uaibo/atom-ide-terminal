@@ -1,20 +1,18 @@
-# PlatformIO IDE Terminal
-A terminal package for Atom, complete with themes, API and more for [PlatformIO IDE](http://platformio.org/platformio-ide).
-
-![demo](https://github.com/platformio/platformio-atom-ide-terminal/raw/master/resources/demo.gif)
-
-*[Nucleus Dark UI](https://atom.io/themes/nucleus-dark-ui) with [Atom Material Syntax](https://atom.io/themes/atom-material-syntax) and our Homebrew theme.*
+# What's changed?
+Because of the bug of `pty.js`, the environment variables in the terminal can not be changed(At least in Windows).
+This new package uses `node-pty` instead of `pty.js` to fix the bug mentioned above.
+And you can run `npm install --save-dev foo` correctly in `atom-ide-terminal`.
 
 ## Install
 Ready to install?
 
-You can install via apm: `apm install platformio-ide-terminal`
+You can install via apm: `apm install atom-ide-terminal`
 
-Or navigate to the install tab in Atom’s settings view, and search for `platformio-ide-terminal`.
+Or navigate to the install tab in Atom’s settings view, and search for `atom-ide-terminal`.
 
 ## Usage
 
-`platformio-ide-terminal` stays in the bottom of your editor while you work.
+`atom-ide-terminal` stays in the bottom of your editor while you work.
 
 Click on a status icon to toggle that terminal (or ``ctrl-` ``). Right click the status icon for a list of available commands. From the right-click menu you can color code the status icon as well as hide or close the terminal instance.
 
