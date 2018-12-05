@@ -38,19 +38,5 @@
         "^1.0.0": "consumeStatusBar"
       }
     }
-  },
-  "providedServices": {
-    "platformioIDETerminal": {
-      "description": "PlatformIO IDE Terminal API",
-      "versions": {
-        "1.1.0": "providePlatformIOIDETerminal"
-      }
-    },
-    "runInTerminal": {
-      "description": "Deprecated API for PlatformIO IDE 1.0",
-      "versions": {
-        "0.14.5": "provideRunInTerminal"
-      }
-    }
   }
 }

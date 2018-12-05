@@ -49,7 +49,7 @@ class StatusBar extends View
       'atom-ide-terminal:insert-custom-text-6': => @runInActiveView (i) -> i.insertSelection(atom.config.get('atom-ide-terminal.customTexts.customText6'))
       'atom-ide-terminal:insert-custom-text-7': => @runInActiveView (i) -> i.insertSelection(atom.config.get('atom-ide-terminal.customTexts.customText7'))
       'atom-ide-terminal:insert-custom-text-8': => @runInActiveView (i) -> i.insertSelection(atom.config.get('atom-ide-terminal.customTexts.customText8'))
-      'atom-ide-terminal:fullscreen': => @activeTerminal.maximize()
+      'atom-ide-terminal:fullscreen': => @activeTerminal?.maximize()
 
     @subscriptions.add atom.commands.add '.xterm',
       'atom-ide-terminal:paste': => @runInActiveView (i) -> i.paste()
