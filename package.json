@@ -1,7 +1,7 @@
 {
   "name": "atom-ide-terminal",
   "main": "./lib/atom-ide-terminal",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "A terminal package for Atom, complete with themes, API and more. Fork of PlatformIO IDE.",
   "author": "Nick Qiu",
   "keywords": [
